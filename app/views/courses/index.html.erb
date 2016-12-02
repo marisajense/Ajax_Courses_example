@@ -1,0 +1,32 @@
+<h1>Ajax Courses</h1>
+<hr />
+
+<!---CREATE ACTION--->
+<form id='add-course-form' method='POST' action='api/v1/courses'>
+  <label>Course Title</label>
+  <input id='course-title' type='text' name='course[title]' required />
+  <br />
+
+  <label>Course Code</label>
+  <input id='course-code' type='text' name='course[code]' required />
+  <br />
+
+  <label>Course Description</label>
+  <textarea id='course-description' name="course[description]"></textarea>
+  <br />
+
+  <input type="checkbox" id="course-active" name='course[active]' />
+    <label for="course-active">Course Active?</label>
+  <br />
+
+  <input type='submit' class='btn green' />
+</form>
+
+<hr />
+
+<h3>Course List</h3>
+<!-- INDEX ACTION-->
+<button id='get-courses' class='btn blue'>Get Courses!</button>
+<div id='courses' class='row'>
+
+</div>
